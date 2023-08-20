@@ -1,0 +1,50 @@
+.aboutSection{
+padding: 100px 0;
+@media screen and (max-width:768px) {
+    padding: 50px 10px;
+}
+.mainAboutContent{
+    max-width: 1150px;
+    margin: 50px auto 0;
+    width: 100%;
+}
+}
+.aboutWrapper{
+    display: grid;
+    grid-template-columns: 700px 400px;
+    gap: 70px;
+    align-items: center;
+    @media screen and (max-width:1150px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;   
+    }
+    @media screen and (max-width:768px) {
+    grid-template-columns: 1fr ; 
+    gap: 40px;  
+    }
+}
+.aboutImage{
+    height: 400px;
+    width: 100%;
+     @media screen and (max-width:576px) {
+        height: 300px;
+    }
+}
+.aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.contactBtn{
+    color: #fff;
+    transition: all .3s;
+    background: #cda45e;
+    border: 1px solid #fff;
+    outline: 2px solid #cda45e;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    letter-spacing: .5px;
+    font-size: 14px;
+    margin-top: 20px;
+}
