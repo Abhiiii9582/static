@@ -20,13 +20,13 @@ const Navbar = ({className}) => {
       {
         id: 3,
         name: "Service",
-        route: "/",
+        route: "/service",
         speed: "900",
       },
       {
         id: 4,
         name: "gallary",
-        route: "/",
+        route: "/gallery",
         speed: "1100",
       },
     ];
@@ -52,8 +52,8 @@ const Navbar = ({className}) => {
                   className={styles.navItem}
                   key={value?.id}
                   onClick={() => getId(value?.id)}
-                  data-aos="fade-down"
-                  data-aos-duration={value?.speed}
+                  // data-aos="fade-down"
+                  // data-aos-duration={value?.speed}
                   // onMouseOver={() => setHover(true)}
                   // onMouseOut={() => setHover(false)}
                 >

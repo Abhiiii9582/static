@@ -9,3 +9,18 @@ p,a,button,label,input{
   font-family: 'Poppins', sans-serif;
 
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:  #eee; 
+  /* border-radius: 10px; */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cda45e; 
+  border-radius: 10px;
+}
