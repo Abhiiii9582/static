@@ -62,7 +62,7 @@ const ServiceSection = () => {
   return (
     <section className={styles.serviceSection}>
       <div className={styles.headingWrapper}>
-        <p className="text-[16px] font-semibold uppercase text-[#cda45e] ">What We Do</p>
+        <h6 className="text-[16px] font-semibold uppercase text-[#cda45e] ">What We Do</h6>
             <h2 className='text-[40px] font-semibold text-[#000] leading-[50px] mb-[25px]'>
               Our Event Service
             </h2>

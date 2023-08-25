@@ -5,11 +5,35 @@ padding: 100px 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     width: 100%;
-    grid-template-rows: 375px 375px;
+    // grid-template-rows: 300px 300px;
+    @media screen and (max-width:992px) {
+    grid-template-columns: repeat(3,1fr);
+    }
+    @media screen and (max-width:768px) {
+    grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width:576px) {
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    // grid-template-rows: auto;
+
+    }
 }
 .mainImage{
     width: 100%;
     position: relative;
+    overflow: hidden;
+    height: 300px;
+    img{
+        transition: all .8s;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover{
+        img{
+            transform: scale(1.28);
+        }
+    }
 }
 .lightImage{
     display: flex;

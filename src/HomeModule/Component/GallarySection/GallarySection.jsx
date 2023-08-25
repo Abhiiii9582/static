@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import styles from "./gallarySection.module.css";
+import styles from "./gallarySection.module.scss";
 import Image from 'next/image';
 import { GrFormClose } from 'react-icons/gr';
 import { BiChevronLeftCircle,BiChevronRightCircle } from "react-icons/bi"
@@ -10,39 +10,39 @@ const GallarySection = () => {
     const [currentIndex,setCurrentIndex]=useState(0)
 
     const images = [
-        {
-            id:"1",
-            img:"https://images.unsplash.com/photo-1689702095156-135bdeb260e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=793&q=80"
-        },
-        {
-            id:"2",
-            img:"https://images.unsplash.com/photo-1689363302902-2c58330d6494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
-        },
-        {
-            id:"3",
-            img:"https://images.unsplash.com/photo-1689361318708-4d242b4c4987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80"
-        },
-        {
-            id:"4",
-            img:"https://images.unsplash.com/photo-1689361319238-d7fc396077e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1445&q=80"
-        },
-        {
-            id:"5",
-            img:"https://images.unsplash.com/photo-1689702095156-135bdeb260e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=793&q=80"
-        },
-        {
-            id:"6",
-            img:"https://images.unsplash.com/photo-1689361319238-d7fc396077e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1445&q=80"
-        },
-        {
-            id:"7",
-            img:"https://images.unsplash.com/photo-1689361319907-a7c75f63600b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
-        },
-        {
-            id:"8",
-            img:"https://images.unsplash.com/photo-1689600242990-25189446fd24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
-        },
-    ]
+      {
+        id: "1",
+        img: "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      },
+      {
+        id: "2",
+        img: "https://images.unsplash.com/photo-1530023367847-a683933f4172?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      },
+      {
+        id: "3",
+        img: "https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      },
+      {
+        id: "4",
+        img: "https://images.unsplash.com/photo-1623788452350-4c8596ff40bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      },
+      {
+        id: "5",
+        img: "https://images.unsplash.com/photo-1595407753234-0882f1e77954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      },
+      {
+        id: "6",
+        img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      },
+      {
+        id: "7",
+        img: "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80",
+      },
+      {
+        id: "8",
+        img: "https://images.unsplash.com/photo-1574155376612-bfa4ed8aabfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      },
+    ];
     const getValue = (item) =>{
         setCurrentIndex(item);
         setLightBox(true);
@@ -61,7 +61,19 @@ const GallarySection = () => {
         return result
       })
     }
-  
+  useEffect(() => {
+    if (lightBox) {
+      document.body.style.overflow = "hidden";
+      document.body.style.maxHeight = "100vh";
+      // document.body.style.paddingRight = "15px";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+      document.body.style.maxHeight = "auto";
+
+      // document.body.style.paddingRight = "0px";
+    };
+  }, [lightBox]);
   return (
     <>
       <section className={styles.gallaryWrapper}>
