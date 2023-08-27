@@ -29,7 +29,7 @@ const MainHeader = () => {
     <>
       <header className={`${styles.header} ${scrollY && styles.sticky}`}>
         <Link
-          href={""}
+          href={"/"}
           className={styles.logoContainer}
           // data-aos="fade-down"
           // data-aos-duration="500"
@@ -37,13 +37,13 @@ const MainHeader = () => {
           <div className={styles.logoWrapper}>
             <Image src={mainLogo} alt="logo-image" />
           </div>
-          <p className={styles.logoText}>BABASAAB</p>
+          <p className={styles.logoText}>BABA SAAB EVENTS</p>
         </Link>
         {/* === desktop Navbar === */}
         <Navbar className={styles.navView} />
         {/* === contact Btn === */}
         {/* <div data-aos="fade-down" data-aos-duration="1400"> */}
-        <button className={styles.contactBtn}>Contact</button>
+        <button className={styles.contactBtn} onClick={()=>window.open("/contact", "_self")}>Contact</button>
         {/* </div> */}
 
         <button

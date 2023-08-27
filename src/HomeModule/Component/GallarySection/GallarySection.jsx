@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from "./gallarySection.module.scss";
 import Image from 'next/image';
 import { GrFormClose } from 'react-icons/gr';
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { BiChevronLeftCircle,BiChevronRightCircle } from "react-icons/bi"
 import LightBox from './LightBox/LightBox';
 
@@ -78,48 +79,58 @@ const GallarySection = () => {
     <>
       <section className={styles.gallaryWrapper}>
         <div className={styles.headingWrapper}>
-        <p className="text-[16px] font-semibold uppercase text-[#cda45e] text-center">Portfolio</p>
-            <h2 className='text-[40px] font-semibold text-[#000] leading-[50px] mb-[25px] text-center'>
-              Our Latest Events
-            </h2>
-             <div className={styles.mainDiv}>
-        {
-            images?.map((value,index)=>{
-                return(
-                    <>
-                    <div className={styles.mainImage} key={value?.id} onClick={()=>getValue(index)} >
-                        <Image src={value?.img} alt='12' fill={"fill"}/>
-                    </div>
-                    </>
-                )
-            })
-        }
-      </div>
-      {
-        lightBox &&  <LightBox lightBox={lightBox}>
-          <div className={styles.lightImage}>
-        <div className={styles.lightImageWrapper}>
-        <Image src={images[currentIndex].img} width={500} height={500}/>
+          <p className="text-[16px] font-semibold uppercase text-[#cda45e] text-center">
+            Portfolio
+          </p>
+          <h2 className="text-[40px] font-semibold text-[#000] leading-[50px] mb-[25px] text-center">
+            Our Latest Events
+          </h2>
+          <div className={styles.mainDiv}>
+            {images?.map((value, index) => {
+              return (
+                <>
+                  <div
+                    className={styles.mainImage}
+                    key={value?.id}
+                    onClick={() => getValue(index)}
+                  >
+                    <Image src={value?.img} alt="12" fill={"fill"} />
+                  </div>
+                </>
+              );
+            })}
+          </div>
+          {lightBox && (
+            <LightBox lightBox={lightBox}>
+              <div className={styles.lightImage}>
+                <div className={styles.lightImageWrapper}>
+                  <Image
+                    src={images[currentIndex].img}
+                    width={500}
+                    height={500}
+                  />
+                </div>
+              </div>
+              <div
+                className={styles.closeIcon}
+                onClick={() => {
+                  setLightBox(false);
+                }}
+              >
+                <GrFormClose className={styles?.closeSvg} />
+              </div>
+              <div className={styles.leftArrow} onClick={prevBtn}>
+                <HiArrowLongLeft />
+              </div>
+              <div className={styles.rightArrow} onClick={nextBtn}>
+                <HiArrowLongRight />
+              </div>
+            </LightBox>
+          )}
         </div>
-        </div>
-        <div className={styles.closeIcon} onClick={()=>{setLightBox(false)}}>
-            <GrFormClose />
-
-        </div>
-        <div className={styles.leftArrow} onClick={prevBtn}>
-            <BiChevronLeftCircle />
-        </div>
-        <div className={styles.rightArrow} onClick={nextBtn}>
-            <BiChevronRightCircle />
-        </div>
-          </LightBox>
-      }
-
-     
-      </div>
       </section>
     </>
-  )
+  );
 }
 
 export default GallarySection

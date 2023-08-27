@@ -68,6 +68,9 @@ padding: 100px 0;
     width: 30px;
     height: 30px;
     stroke: #fff;
+    & path{
+        stroke: #fff;
+    }
 }
 .leftArrow{
     position: absolute;

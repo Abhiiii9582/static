@@ -11,6 +11,7 @@ import {
   BiLogoInstagram,
   BiLogoYoutube,
 } from "react-icons/bi";
+import FooterNavbar from './NavBar/FooterNavbar';
 
 
 const Footer = () => {
@@ -41,14 +42,14 @@ const Footer = () => {
     <section className={styles?.Footer}>
       <div className={styles?.footerContent}>
         <Image src={logo} alt="main-logo" />
-        <Navbar className={styles?.footerNavbar} />
+        <FooterNavbar className={styles?.footerNavbar} />
         {/* ==== social icons start ===== */}
         <SocialMediaIcon SocialMedia={SocialMedia} />
         {/* ==== social icons end ===== */}
         {/* =====copy write section start =====  */}
         <div className={styles?.copyRight}>
           <p>
-            © Copyright <strong>BABASAAB.</strong> All Rights Reserved
+            © Copyright <strong>BABA SAAB EVENTS.</strong> All Rights Reserved
           </p>
         </div>
         {/* =====copy write section end =====  */}

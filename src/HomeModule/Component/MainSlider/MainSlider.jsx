@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import styles from "./mainSlider.module.css"
+import styles from "./mainSlider.module.scss"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -15,6 +15,8 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import slide1 from "../../../assets/mp4.jpg";
+import slide2 from "../../../assets/slider2.jpg";
+import slide3 from "../../../assets/slide3.jpg";
 
 const MainSlider = () => {
     const progressCircle = useRef(null);
@@ -25,45 +27,72 @@ const MainSlider = () => {
   };
   return (
     <>
-    <div className={styles.mainWrapper}>
-       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper"
-      >
-       
-        <SwiperSlide>
-          <div className={styles.imageWrapper}>
-          </div>
-          <Image src={slide1} />
-          <div className={styles.content}>
-            <h3>Wedding Planner</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sed at perspiciatis nesciunt consequatur, deleniti voluptatibus nisi impedit nemo quos tempora quas dicta, debitis unde molestiae consectetur iusto quisquam laborum?</p>
-          </div>
-        </SwiperSlide>
-       
-        
-        <div className={styles.autoplayProgress} slot="container-end">
-          <svg viewBox="0 0 48 48" ref={progressCircle}>
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref={progressContent}></span>
-        </div>
-      </Swiper>
-    </div>
+      <div className={styles.mainWrapper}>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          
+          modules={[Autoplay, Pagination]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className={styles.imageWrapper}></div>
+            <Image src={slide1} />
+            <div className={styles.content}>
+              <h3>Wedding Planner</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+                sed at perspiciatis nesciunt consequatur, deleniti voluptatibus
+                nisi impedit nemo quos tempora quas dicta, debitis unde
+                molestiae consectetur iusto quisquam laborum?
+              </p>
+            </div>
+          </SwiperSlide>
 
+          <SwiperSlide>
+            <div className={styles.imageWrapper}></div>
+            <Image src={slide2} />
+            <div className={styles.content}>
+              <h3>Wedding Planner</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+                sed at perspiciatis nesciunt consequatur, deleniti voluptatibus
+                nisi impedit nemo quos tempora quas dicta, debitis unde
+                molestiae consectetur iusto quisquam laborum?
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={styles.imageWrapper}></div>
+            <Image src={slide3} />
+            <div className={styles.content}>
+              <h3>Wedding Planner</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
+                sed at perspiciatis nesciunt consequatur, deleniti voluptatibus
+                nisi impedit nemo quos tempora quas dicta, debitis unde
+                molestiae consectetur iusto quisquam laborum?
+              </p>
+            </div>
+          </SwiperSlide>
+          <div className={styles.autoplayProgress} slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
+          </div>
+        </Swiper>
+      </div>
     </>
-  )
+  );
 }
 
 export default MainSlider

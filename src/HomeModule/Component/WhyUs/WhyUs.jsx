@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from "./whyUs.module.css";
+import styles from "./whyUs.module.scss";
+import Link from 'next/link';
 
 const WhyUs = ({contactBtn}) => {
   return (
@@ -14,7 +15,9 @@ const WhyUs = ({contactBtn}) => {
               You Have an Event to Plan and We Have the Solutions
             </h2>
             {contactBtn && 
+            <Link href="/about">
             <button className={styles.contactBtn}>Read More</button>
+            </Link>
             }
             </div>
           <div className={styles.rightContent}>

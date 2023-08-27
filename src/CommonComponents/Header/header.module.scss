@@ -24,6 +24,12 @@
       transform: translateY(0);
     }
   }
+  // .navView{
+  //   position: relative;
+  //   :global .navList{
+  //     background: #cda45e;
+  //   }
+  // }
 }
 .logoContainer {
   display: flex;
@@ -54,11 +60,13 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+
   &::before {
     position: absolute;
     content: "";
     height: 120%;
-    width: 60%;
+    width: 80%;
     left: -300px;
     background: hsla(0, 0%, 100%, 0.6);
     top: 0;

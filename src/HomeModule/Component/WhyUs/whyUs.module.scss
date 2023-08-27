@@ -34,6 +34,27 @@ overflow: hidden;
     padding: 7px 20px;
     letter-spacing: .5px;
     font-size: 14px;
+    position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 120%;
+    width: 80%;
+    left: -300px;
+    background: hsla(0, 0%, 100%, 0.6);
+    top: 0;
+    -webkit-clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    transition: all 0.5s;
+  }
+  &:hover::before {
+    left: 300px;
+  }
+    
 }
 .istDiv{
     padding: 0px 15px;

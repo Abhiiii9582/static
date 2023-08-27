@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from "./aboutSection.module.css";
+import styles from "./aboutSection.module.scss";
 import Image from 'next/image';
 import about1 from "../../../assets/about1.jpg"
+import Link from 'next/link';
 
 const AboutSection = ({ button, mainAboutContent }) => {
   return (
@@ -27,7 +28,11 @@ const AboutSection = ({ button, mainAboutContent }) => {
             event does not have any dress rehearsal and so there is no second
             chance.
           </p>
-          {button && <button className={styles.contactBtn}>Read More</button>}
+          {button && (
+            <Link href="/about">
+              <button className={styles.contactBtn}>Read More</button>{" "}
+            </Link>
+          )}
         </div>
       </div>
       {mainAboutContent && (

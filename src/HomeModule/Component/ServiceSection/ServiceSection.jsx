@@ -6,59 +6,60 @@ import ServiceCard from './ServiceCard/ServiceCard';
 const ServiceSection = () => {
   const serviceCardData = [
     {
-      id:1,
-      cardNumber:"01",
-      cardHeading:"BirthDay Party",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
+      id: 1,
+      cardNumber: "01",
+      cardHeading: "BirthDay Party",
+      cardContent:
+        "We have more than 20 year's of experience in this field. So we plan everything kindly.",
+      backgroundImage: "",
+      route: "/service",
     },
     {
-      id:2,
-      cardNumber:"02",
-      cardHeading:"Corporate Events",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
-
+      id: 2,
+      cardNumber: "02",
+      cardHeading: "Corporate Events",
+      cardContent:
+        "We have more than 20 year's of experience in this field. So we plan everything kindly.",
+      backgroundImage: "",
+      route: "/service",
     },
     {
-      id:3,
-      cardNumber:"03",
-      cardHeading:"Weddings",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
-
+      id: 3,
+      cardNumber: "03",
+      cardHeading: "Weddings",
+      cardContent:
+        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
+      backgroundImage: "",
+      route: "/service",
     },
     {
-      id:4,
-      cardNumber:"04",
-      cardHeading:"Anniversaries",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
-
+      id: 4,
+      cardNumber: "04",
+      cardHeading: "Anniversaries",
+      cardContent:
+        "We know that time is money so we provide every facility on time. There's no delay in our work.",
+      backgroundImage: "",
+      route: "/service",
     },
     {
-      id:5,
-      cardNumber:"05",
-      cardHeading:"Children Party",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
-
+      id: 5,
+      cardNumber: "05",
+      cardHeading: "Children Party",
+      cardContent:
+        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
+      backgroundImage: "",
+      route: "/service",
     },
     {
-      id:6,
-      cardNumber:"06",
-      cardHeading:"Private Party",
-      cardContent:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, odio?",
-      backgroundImage:"",
-      route:""
-
-    }
-  ]
+      id: 6,
+      cardNumber: "06",
+      cardHeading: "Private Party",
+      cardContent:
+        "We know that time is money so we provide every facility on time. There's no delay in our work.",
+      backgroundImage: "",
+      route: "/service",
+    },
+  ];
   return (
     <section className={styles.serviceSection}>
       <div className={styles.headingWrapper}>

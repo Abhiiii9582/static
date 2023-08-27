@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import styles from "./navbar.module.css"
+import styles from "./navbar.module.scss";
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
 
 const Navbar = ({className}) => {
     const navData = [
@@ -25,22 +26,18 @@ const Navbar = ({className}) => {
       },
       {
         id: 4,
-        name: "gallary",
+        name: "gallery",
         route: "/gallery",
         speed: "1100",
       },
     ];
+     const pathname = usePathname();
+     console.log(pathname, "pathname");
     const getId = (item) =>{
       console.log(item)
     }
-  //  const [cursorX,setCursorX] = useState()
-  //  const [cursorY,setCursorY] = useState()
-  //  const [hover,setHover] = useState(false)
 
-  //  window.addEventListener('mousemove',(e) =>{
-  //   setCursorX(e.pageX)
-  //   setCursorY(e.pageY)
-  //  })
+  
    
   return (
     <nav className={`${styles.navbar} ${className}`}>
@@ -49,20 +46,13 @@ const Navbar = ({className}) => {
             return (
               <>
                 <li
-                  className={styles.navItem}
+                  className={`${styles.navItem} ${pathname === value?.route && styles.activeNav}`}
                   key={value?.id}
                   onClick={() => getId(value?.id)}
-                  // data-aos="fade-down"
-                  // data-aos-duration={value?.speed}
-                  // onMouseOver={() => setHover(true)}
-                  // onMouseOut={() => setHover(false)}
                 >
                   <Link
                     href={value?.route}
                     className={styles.navLink}
-                    // dataText={value?.name}
-                    // onMouseOver={() => setHover(true)}
-                    // onMouseOut={() => setHover(false)}
                   >
                     {value?.name}
                   </Link>
@@ -72,11 +62,7 @@ const Navbar = ({className}) => {
         })}
         
       </ul>
-      {/* <div className={`${styles.cursor} ${hover && styles.scale}`}
-      style={{
-        left:cursorX + 'px',
-        top:cursorY + 'px'
-      }}></div> */}
+      
     </nav>
   );
 }

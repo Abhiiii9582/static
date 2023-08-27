@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from "./homeContact.module.css";
+import styles from "./homeContact.module.scss";
+import Link from 'next/link';
 
 const HomeContact = () => {
   return (
@@ -15,7 +16,9 @@ const HomeContact = () => {
           <p className="text-[16px] text-white text-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias quia quod fuga necessitatibus est magnam voluptates enim esse iusto accusamus!
           </p>
-          <button className={styles.contactBtn}>Read More</button>
+          <Link href="/contact">
+          <button className={styles.contactBtn}>Contact Us</button>
+          </Link>
         </div>
       </section>
     </>
