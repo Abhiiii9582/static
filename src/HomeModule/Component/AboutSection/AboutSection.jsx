@@ -15,7 +15,7 @@ const AboutSection = ({ button, mainAboutContent }) => {
           <h6 className="text-[16px] font-semibold uppercase text-[#cda45e] mb-[16px]">
             About Us
           </h6>
-          <h2 className="text-[40px] font-semibold text-[#000] leading-[50px] mb-[16px]">
+          <h2 className="text-[40px] font-semibold text-[#000] leading-[50px] mb[16px]">
             We're the largest Events Agency
           </h2>
           <p className="text-[15px] font-normal text-[#8d8d8d]">

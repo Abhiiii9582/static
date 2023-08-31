@@ -12,6 +12,7 @@ margin: 0 auto;
     margin: 0 auto;
     text-align: center;
 }
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -71,4 +72,13 @@ margin: 0 auto;
 .testimonialWrapper :global .swiper-pagination-bullet-active{
     background: #cda45e;
 }
-
+@media screen and (max-width:600px) {
+    .headingWrapper h2{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+     .headingWrapper p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

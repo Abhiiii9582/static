@@ -14,7 +14,7 @@ const BreadCrumb = ({BreadCrumbData}) => {
           <Link href={BreadCrumbData?.link}>{BreadCrumbData?.linkHeading}</Link>
         </li>
       </ul>
-      <h1>{BreadCrumbData?.mainHeading}</h1>
+      {/* <h1>{BreadCrumbData?.mainHeading}</h1> */}
     </div>
   );
 }
