@@ -7,6 +7,9 @@
   z-index: 99;
   width: 100%;
   align-items: center;
+  @media screen and (max-width:991px) {
+    display: none;
+  }
   &.sticky {
     background-color: #000;
     position: fixed;
@@ -94,6 +97,10 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  display: none;
+  @media screen and (max-width:991px) {
+    display: flex;
+  }
 }
 .overlay{
   position: fixed;

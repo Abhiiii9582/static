@@ -42,58 +42,57 @@ const MainHeader = () => {
   }, [responsiveNavBar]);
   return (
     <>
-      {window.innerWidth > 991 ? (
-        <header className={`${styles.header} ${scrollY && styles.sticky}`}>
-          <Link href={"/"} className={styles.logoContainer}>
-            <div className={styles.logoWrapper}>
-              <Image src={mainLogo} alt="logo-image" />
-            </div>
-            <p className={styles.logoText}>BABA SAAB EVENTS</p>
-          </Link>
-          {/* === desktop Navbar === */}
-          <Navbar className={styles.navView} />
-          {/* === contact Btn === */}
-          <button
-            className={styles.contactBtn}
-            onClick={() => window.open("/contact", "_self")}
-          >
-            Contact
-          </button>
-          <button className={styles.menuIcon} onClick={showSideBar}>
-            <HiOutlineMenuAlt3 />
-          </button>
-        </header>
-      ) : (
-        <div className={styles?.responsiveHeader}>
-          <Link href={"/"} className={styles.logoContainer}>
-            <div className={styles.logoWrapper}>
-              <Image src={mainLogo} alt="logo-image" />
-            </div>
-          </Link>
-          <button
-            className={styles.menuIcon}
-            onClick={() => setResponsiveNavBar(!responsiveNavBar)}
-          >
-            <HiOutlineMenuAlt3 />
-          </button>
-          {/* === overlay start === */}
-          <div
-            className={`${styles.overlay} ${
-              responsiveNavBar && styles.activeOverlay
-            }`}
-            onClick={() => {
-              setResponsiveNavBar(false);
-            }}
-          ></div>
-          {/* === overlay end === */}
-        </div>
-      )}
+      <header className={`${styles.header} ${scrollY && styles.sticky}`}>
+        <Link href={"/"} className={styles.logoContainer}>
+          <div className={styles.logoWrapper}>
+            <Image src={mainLogo} alt="logo-image" />
+          </div>
+          <p className={styles.logoText}>BABA SAAB EVENTS</p>
+        </Link>
+        {/* === desktop Navbar === */}
+        <Navbar className={styles.navView} />
+        {/* === contact Btn === */}
+        <button
+          className={styles.contactBtn}
+          onClick={() => window.open("/contact", "_self")}
+        >
+          Contact
+        </button>
+        <button className={styles.menuIcon} onClick={showSideBar}>
+          <HiOutlineMenuAlt3 />
+        </button>
+      </header>
+      {/* === responsive header start == */}
+      <div className={styles?.responsiveHeader}>
+        <Link href={"/"} className={styles.logoContainer}>
+          <div className={styles.logoWrapper}>
+            <Image src={mainLogo} alt="logo-image" />
+          </div>
+        </Link>
+        <button
+          className={styles.menuIcon}
+          onClick={() => setResponsiveNavBar(!responsiveNavBar)}
+        >
+          <HiOutlineMenuAlt3 />
+        </button>
+        {/* === overlay start === */}
+        <div
+          className={`${styles.overlay} ${
+            responsiveNavBar && styles.activeOverlay
+          }`}
+          onClick={() => {
+            setResponsiveNavBar(false);
+          }}
+        ></div>
+        {/* === overlay end === */}
+      </div>
 
       <RightSideBar setSideBar={setSideBar} sidebar={sidebar} />
       <ResponsiveNavBar
         responsiveNavBar={responsiveNavBar}
         setResponsiveNavBar={setResponsiveNavBar}
       />
+      {/* === responsive header end == */}
     </>
   );
 }
