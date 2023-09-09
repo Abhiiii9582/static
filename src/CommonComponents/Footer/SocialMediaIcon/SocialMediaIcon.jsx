@@ -11,7 +11,9 @@ const SocialMediaIcon = ({ className, SocialMedia }) => {
           return (
             <>
               <li className={styles?.socialMediaIcon} key={value?.id}>
-                <Link href={value?.link}>{value?.icon}</Link>
+                <Link href={value?.link} target="_blank">
+                  {value?.icon}
+                </Link>
               </li>
             </>
           );

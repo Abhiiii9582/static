@@ -20,22 +20,22 @@ const RightSideBar = ({sidebar,setSideBar}) => {
   const SocialMedia = [
     {
       id: 1,
-      link: "/",
+      link: " https://www.facebook.com/babasaabevents/",
       icon: <BiLogoFacebook />,
     },
     {
       id: 2,
-      link: "/",
+      link: "https://twitter.com/BabaEvent",
       icon: <BiLogoTwitter />,
     },
     {
       id: 3,
-      link: "/",
+      link: "https://www.instagram.com/babasaabevents/",
       icon: <BiLogoInstagram />,
     },
     {
       id: 4,
-      link: "/",
+      link: "https://www.youtube.com/channel/UCxal0pDnEpZ9Jb0uSwLlF7w",
       icon: <BiLogoYoutube />,
     },
   ];

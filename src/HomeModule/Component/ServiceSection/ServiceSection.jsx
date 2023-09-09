@@ -8,9 +8,9 @@ const ServiceSection = () => {
     {
       id: 1,
       cardNumber: "01",
-      cardHeading: "BirthDay Party",
+      cardHeading: "Weddings",
       cardContent:
-        "We have more than 20 year's of experience in this field. So we plan everything kindly.",
+        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
       backgroundImage: "",
       route: "/service",
     },
@@ -26,16 +26,16 @@ const ServiceSection = () => {
     {
       id: 3,
       cardNumber: "03",
-      cardHeading: "Weddings",
+      cardHeading: "Anniversaries",
       cardContent:
-        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
+        "We know that time is money so we provide every facility on time. There's no delay in our work.",
       backgroundImage: "",
       route: "/service",
     },
     {
       id: 4,
       cardNumber: "04",
-      cardHeading: "Anniversaries",
+      cardHeading: "Private Party",
       cardContent:
         "We know that time is money so we provide every facility on time. There's no delay in our work.",
       backgroundImage: "",
@@ -44,18 +44,18 @@ const ServiceSection = () => {
     {
       id: 5,
       cardNumber: "05",
-      cardHeading: "Children Party",
+      cardHeading: "BirthDay Party",
       cardContent:
-        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
+        "We have more than 20 year's of experience in this field. So we plan everything kindly.",
       backgroundImage: "",
       route: "/service",
     },
     {
       id: 6,
       cardNumber: "06",
-      cardHeading: "Private Party",
+      cardHeading: "Children Party",
       cardContent:
-        "We know that time is money so we provide every facility on time. There's no delay in our work.",
+        "We provide many types of services like catering, wedding decoration, theme party decoration etc.",
       backgroundImage: "",
       route: "/service",
     },
@@ -63,24 +63,24 @@ const ServiceSection = () => {
   return (
     <section className={styles.serviceSection}>
       <div className={styles.headingWrapper}>
-        <h6 className="text-[16px] font-semibold uppercase text-[#cda45e] ">What We Do</h6>
-            <h2 className='text-[40px] font-semibold text-[#000] leading-[50px] mb-[25px]'>
-              Our Event Service
-            </h2>
+        <h6 className="text-[18px] font-semibold uppercase text-[#cda45e] ">
+          What We Do
+        </h6>
+        <h2 className="text-[40px] font-semibold text-[#000] leading-[50px] mb-[25px]">
+          Our Services
+        </h2>
       </div>
       <div className={styles.serviceWrapper}>
-        {
-          serviceCardData?.map((value)=>{
-            return(
-              <>
-              <ServiceCard {...value} key={value?.id}/>
-              </>
-            )
-          })
-        }
+        {serviceCardData?.map((value) => {
+          return (
+            <>
+              <ServiceCard {...value} key={value?.id} />
+            </>
+          );
+        })}
       </div>
     </section>
-  )
+  );
 }
 
 export default ServiceSection

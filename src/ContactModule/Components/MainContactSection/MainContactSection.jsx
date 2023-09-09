@@ -87,6 +87,20 @@ const MainContactSection = () => {
               </div>
               <div className={styles?.formLabel}>
                 <label>
+                  Service<sup>*</sup>
+                </label>
+                <select>
+                  <option selected>Select Service</option>
+                  <option>Weddings</option>
+                  <option>Corporate Events </option>
+                  <option>Anniversaries</option>
+                  <option>Private Party</option>
+                  <option>Birthday Party </option>
+                  <option>Children Party</option>
+                </select>
+              </div>
+              <div className={styles?.formLabel}>
+                <label>
                   Phone Number<sup>*</sup>
                 </label>
                 <input type="number" placeholder="Your Number" />
@@ -95,7 +109,7 @@ const MainContactSection = () => {
                 <label>Message</label>
                 <textarea rows={4} placeholder="Your Message" />
               </div>
-                <button className={styles.contactBtn}>Submit</button>
+              <button className={styles.contactBtn}>Submit</button>
             </form>
           </div>
           <div className={styles?.imageWrapper}>
