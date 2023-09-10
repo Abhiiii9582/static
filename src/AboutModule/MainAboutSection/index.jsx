@@ -16,7 +16,7 @@ const MainAbout = () => {
   return (
     <section className={styles?.MainAbout}>
       <BreadCrumb BreadCrumbData={BreadCrumbData} />
-      <AboutSection mainAboutContent={true} />
+      <AboutSection mainAboutContent={true} className={styles?.aboutSection} />
 
       <WhyUs />
       <OurTeam />

@@ -4,3 +4,10 @@
 
 //     width: 100%;
 // }
+.aboutSection{
+    & :global .aboutSection_aboutWrapper__bMbjH{
+        grid-template-columns: 700px 1fr;
+        display: grid;
+        align-items: flex-start;
+    }
+}

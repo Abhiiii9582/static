@@ -96,3 +96,30 @@ padding: 100px 0;
     height: 30px;
     fill: #fff;
 }
+.categoryBtn{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media screen and (max-width:991px) {
+        display: none;
+    }
+    // overflow: auto;
+    button{
+        font-family: "Poppins", "sans - serif";
+        // transition: all .3s;
+        padding-bottom: 2px;
+        white-space: nowrap;
+        &:hover{
+            color: #cda45e;
+        }
+        &.activeBtn{
+        font-weight: 600;
+        color: #cda45e;
+        border-bottom: 2px solid #cda45e;
+
+        }
+    }
+}
